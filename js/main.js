@@ -7,6 +7,7 @@ const equalEl = document.querySelector(".equal");
 const clearAllEl = document.querySelector(".all-clear");
 const clearLastEl = document.querySelector(".last-entity-clear");
 const del = document.querySelector(`.del`);
+
 let dis1Num = "";
 let dis2Num = "";
 let result = null;
@@ -39,6 +40,7 @@ operationEl.forEach((operation) => {
     lastOperation = operationName;
   });
 });
+
 function clearVar(name = "") {
   dis1Num += dis2Num + " " + name + " ";
   display1El.innerText = dis1Num;
@@ -93,10 +95,6 @@ del.addEventListener(`click`, ()=>{
   display2El.innerText = dis2Num;
 })
 
-
-
-
-
 window.addEventListener("keydown", (e) => {
   if (
     e.key === "0" ||
@@ -126,6 +124,7 @@ window.addEventListener("keydown", (e) => {
     clearAllEl.click()
   }
 });
+
 function clickButtonEl(key) {
   numbersEl.forEach((button) => {
     if (button.innerText === key) {
@@ -133,6 +132,7 @@ function clickButtonEl(key) {
     }
   });
 }
+
 function clickOperation(key) {
   operationEl.forEach((operation) => {
     if (operation.innerText === key) {
@@ -140,7 +140,7 @@ function clickOperation(key) {
     }
   });
 }
+
 function clickEqual() {
   equalEl.click();
 }
-
