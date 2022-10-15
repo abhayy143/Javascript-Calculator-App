@@ -20,7 +20,6 @@ Are you new to web development? Just learn HTML/CSS/JS and you want to contribut
    <p align="center">  <img  src="https://i.imgur.com/P0n6f97.png">  </p>
    Click on fork to create a copy of project to your account. This creates a separate copy for you to workon
    <br>
-   
 ### 3. Clone the repository to your local machine using:
       ```
        $ git clone https://github.com/<your-account-username>/<your-forked-project>.git 
@@ -35,9 +34,8 @@ Are you new to web development? Just learn HTML/CSS/JS and you want to contribut
    ```
 
 ### 5. Pull the latest changes from the main repository if you think your fork is behind:
-
    ```
-    git pull upstream main
+    git pull upstream master
    ```
 
 ### 6. Create a new branch and switch to it for your issue fix or feature using:
