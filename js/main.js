@@ -7,11 +7,17 @@ const equalEl = document.querySelector(".equal");
 const clearAllEl = document.querySelector(".all-clear");
 const clearLastEl = document.querySelector(".last-entity-clear");
 const del = document.querySelector(`.del`);
+
 let dis1Num = "";
+let dis1NumTemp = "";
+let dis1ResTemp = "";
 let dis2Num = "";
-let result = null;
+let dis2NumTemp = "";
 let lastOperation = "";
+let result = null;
+let resultTemp = null;
 let haveDot = false;
+let isContinue = false;
 
 numbersEl.forEach((number) => {
   number.addEventListener("click", (e) => {
@@ -21,6 +27,7 @@ numbersEl.forEach((number) => {
       return;
     }
     dis2Num += e.target.innerText;
+    dis2NumTemp = dis2Num;
     display2El.innerText = dis2Num;
   });
 });
@@ -28,19 +35,26 @@ numbersEl.forEach((number) => {
 operationEl.forEach((operation) => {
   operation.addEventListener("click", (e) => {
     if (!dis2Num) return;
+    isContinue = false;
     haveDot = false;
     const operationName = e.target.innerText;
     if (dis1Num && dis2Num && lastOperation) {
       mathOperation();
     } else {
       result = parseFloat(dis2Num);
+      dis1NumTemp = result;
     }
     clearVar(operationName);
     lastOperation = operationName;
   });
 });
+
 function clearVar(name = "") {
-  dis1Num += dis2Num + " " + name + " ";
+  if (dis1Num == dis1ResTemp && isContinue) {
+    dis1Num = `${resultTemp} ${lastOperation} ${dis2NumTemp}`;
+  } else {
+    dis1Num += dis2Num + " " + name + " ";
+  }
   display1El.innerText = dis1Num;
   display2El.innerText = "";
   dis2Num = "";
@@ -48,26 +62,36 @@ function clearVar(name = "") {
 }
 
 function mathOperation() {
-  result  =`${result} ${lastOperation} ${dis2Num}`
+  if (isContinue) {
+    result = resultTemp;
+    dis2Num = dis2NumTemp;
+  }
+
+  result  = `${result} ${lastOperation} ${dis2Num}`
 }
 
 equalEl.addEventListener("click", () => {
+  if (isContinue) dis1Num = dis1ResTemp;
   if (!dis2Num || !dis1Num) return;
   haveDot = false;
   mathOperation();
+  isContinue = true;
+  if (dis1NumTemp == 1 && lastOperation == "x") isContinue = false;
   clearVar();
   result = evaluate(result.replaceAll("x", "*"))
+  if (isContinue) resultTemp = result;
   display2El.innerText = result;
   tempResultEl.innerText = "";
   dis2Num = result;
+  if (!dis1ResTemp) dis1ResTemp = dis1Num;
   dis1Num = "";
 });
 
 clearAllEl.addEventListener("click", () => {
   dis1Num = "";
   dis2Num = "";
-  display1El.innerText = "";
-  display2El.innerText = "";
+  display1El.innerText = "0";
+  display2El.innerText = "0";
   result = "";
   tempResultEl.innerText = "";
 });
@@ -116,6 +140,7 @@ window.addEventListener("keydown", (e) => {
     clearAllEl.click()
   }
 });
+
 function clickButtonEl(key) {
   numbersEl.forEach((button) => {
     if (button.innerText === key) {
@@ -123,6 +148,7 @@ function clickButtonEl(key) {
     }
   });
 }
+
 function clickOperation(key) {
   operationEl.forEach((operation) => {
     if (operation.innerText === key) {
@@ -130,6 +156,7 @@ function clickOperation(key) {
     }
   });
 }
+
 function clickEqual() {
   equalEl.click();
 }
