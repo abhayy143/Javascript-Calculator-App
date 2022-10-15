@@ -37,7 +37,7 @@ Are you new to web development? Just learn HTML/CSS/JS and you want to contribut
 ### 5. Pull the latest changes from the main repository if you think your fork is behind:
 
    ```
-    git pull upstream main
+    git pull upstream master
    ```
 
 ### 6. Create a new branch and switch to it for your issue fix or feature using:
