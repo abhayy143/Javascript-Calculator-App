@@ -7,14 +7,18 @@
     font-family: "Montserrat", sans-serif;
   }
 
-section{
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  section{
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+
 
 .container{
+  width: 36vw;
+  height: fit-content;
+  margin: auto;
   background-color:var(--container-bg);
   border-radius: 28px;
 }
@@ -23,25 +27,32 @@ section{
   border-radius: 28px;
   padding: 16px;
   display: grid;
-  grid-template-columns: repeat(4,66px);
+  grid-template-columns: repeat(4,1fr);
+  align-content: center;
   background-color:var(--container-bg);
 }
+
 
 .display{
   
   grid-column: span 4;
-  height: 68px;
-  width: 258px;
+  height: 8vw;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
   background: var(--display-bg);
   box-shadow:  var(--display-shadow);
   border: none;
   border-radius: 32px;
   color: rgb(26,25,25);
   text-align: end;
-  margin: 40px 0px 30px 0px;
-  padding:  20px;
-  font-size: 20px;
-  margin-left: 20px;
+  margin: 2vw auto 1vw;
+  padding:  0 20px 0;
+  font-size: 2vw;
 }
 
 
@@ -53,20 +64,23 @@ section{
   opacity: 0.3;
 }
 
+
 .button{
-  
-  border-radius: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--btns-color);
   box-shadow: var(--btn-shadow);
   border: none;
   border-radius: 50%;
-  width: 40px;
-  line-height: 40px;
-  margin: 10px;
+  width: 5vw;
+  height: 5vw;
+  color: #021b31;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2vw;
   text-align: center;
   cursor: pointer;
+  margin: 1vw auto 1vw;
 }
 
 .button:hover{
@@ -74,12 +88,56 @@ section{
             
 }
 
-.prevent-select {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+/* .prevent-select { */
+  /* -webkit-user-select: none; Safari */
+  /* -ms-user-select: none; IE 10 and IE 11 */
+  /* user-select: none; Standard syntax */
+/* } */
+
+
+@media screen and (max-width:900px) {
+  .container{
+    width: 40vw;
+  }
+  .button{
+    width: 6vw;
+    height: 6vw;
+    font-size: 2.5vw;
+  }
+  .display{
+    width: 34vw;
+    font-size: 2.5vw;
+  }
 }
-
-
+@media screen and (max-width:700px) {
+  .container{
+    width: 50vw;
+  }
+  .button{
+    font-size: 3vw;
+  }
+  .display{
+    width: 41vw;
+    height: 10vw;
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width:550px) {
+  .container{
+    width: 300px;
+  }
+  .button{
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    margin: 6px auto 6px;
+  }
+  .display{
+    width: 240px;
+    height: 60px;
+    font-size: 15px;
+    margin: 10px auto 10px;
+  }
+}
 
 
