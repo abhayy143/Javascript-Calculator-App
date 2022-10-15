@@ -91,7 +91,7 @@ equalEl.addEventListener("click", () => {
   haveDot = false;
   mathOperation();
   isContinue = true;
-  if (resultOne == 1) isContinue = false;
+  if (resultOne == 1 && lastOperation == "x") isContinue = false;
   clearVar();
   resultTemp = result;
   display2El.innerText = result;
