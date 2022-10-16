@@ -34,17 +34,23 @@ numbersEl.forEach((number) => {
 
 operationEl.forEach((operation) => {
   operation.addEventListener("click", (e) => {
-    if (!dis2Num) return;
     isContinue = false;
     haveDot = false;
     const operationName = e.target.innerText;
     if (dis1Num && dis2Num && lastOperation) {
       mathOperation();
+      clearVar(operationName);
     } else {
-      result = parseFloat(dis2Num);
-      dis1NumTemp = result;
+      if(!dis2Num){
+        // Operator switched
+        dis1Num =  dis1Num.substring(0, dis1Num.length-2)+ " " + operationName + " ";
+        display1El.innerText = dis1Num;
+      }else{
+        result = parseFloat(dis2Num);
+        dis1NumTemp = result;
+        clearVar(operationName);
+      }
     }
-    clearVar(operationName);
     lastOperation = operationName;
   });
 });
