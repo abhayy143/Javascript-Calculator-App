@@ -30,7 +30,7 @@ html[data-theme='dark'] {
   --btn-shadow: 7px 7px 20px #080a0a, -7px -7px 20px #855923b3;
   --btn-hover-shadow: inset 7px 7px 10px #55400b,
     inset -7px -7px 20px #dc9f09;
-
+  --text-bg : grey;
 }
 
 body {
