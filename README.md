@@ -27,22 +27,22 @@
 - https://emmycalculatorapp.netlify.app
 
 ## Who can contribute
- Anyone interested in contributing to open source project can contribute to this, It is a beginner friendly web application built with HTML, CSS and JavaScript
+ Anyone interested in contributing to open source project can contribute to this, It is a beginner friendly web application built with HTML, CSS, and JavaScript
  <br>
- This project is made open source to give opportunity to newbies in web development to contribute to open source project
+ This project is made open source to give an opportunity to newbies in web development to contribute to open source project
 <br>
  Checkout CONTRIBUTING.md for more info on how to contribute to this project
 
 
 ## How to get started with Open Source
-Here's a quick run down on how to get started with open source, first of all let's know some basic terminologies:
-- Git: is a versioning system that let's you store your code and code history on your local computer preventing loses and allowing sharing of that code
+Here's a quick rundown on how to get started with open source, first of all, let's know some basic terminologies:
+- Git: is a versioning system that let's you store your code and code history on your local computer preventing losses and allowing sharing of that code
 - Github: is a server that let's you store the history in a database
-- Open Source: A project is said to be open sourced if you can see the code on GitHub
+- Open Source: A project is said to be open-sourced if you can see the code on GitHub
 - Fork: This is a copy that you make of a project on GitHub, it gets added to your repositories
 - Repository: A project on GitHub is called a repository
 - Pull Request: This is a fix for an issue proposed to be done in a project, this consists of you editing a file in the project.
-- Issue: An issue is a change that should be done in a project, can be a bug, a new feature or a suggestion to a project
+- Issue: An issue is a change that should be done in a project, can be a bug, a new feature, or a suggestion for a project
 - Branch: A branch is a new workspace derived from the default workspace(main or master), it allows you to work on something without affecting the original code
 
 Now you know some basic terms, let's get into how to get started with some resources to let you understand open source better:
@@ -61,13 +61,13 @@ Now you know some basic terms, let's get into how to get started with some resou
 
 ## How to contribute:
 
-- Drop a :star: on the Github repository (optional)<br/>
+- Drop a :star: on the GitHub repository (optional)<br/>
 
 - Before Contribute Please read [CONTRIBUTING.md](https://github.com/Emilance/Javascript-Calculator-App/blob/master/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/Emilance/Javascript-Calculator-App/blob/master/CODE_OF_CONDUCT.md)
 
-- Create an issue of the project or a feature you would like to add in the project and get the task assigned for youself.(Issue can be any bug fixes or any feature you want to add in this project).
+- Create an issue of the project or a feature you would like to add in the project and get the task assigned for yourself.(Issue can be any bug fixes or any feature you want to add in this project).
 
-- Fork the repo to your Github.<br/>
+- Fork the repo to your GitHub.<br/>
 
 - Clone the Repo by going to your local Git Client in a particular local folder in your local machine by using this command with your forked repository link in place of below given link: <br/>
   `git clone https://github.com/your-github-username/Javascript-Calculator-App.git`
