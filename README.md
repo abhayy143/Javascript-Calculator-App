@@ -36,8 +36,8 @@
 
 ## How to get started with Open Source
 Here's a quick rundown on how to get started with open source, first of all, let's know some basic terminologies:
-- Git: is a versioning system that let's you store your code and code history on your local computer preventing losses and allowing sharing of that code
-- Github: is a server that let's you store the history in a database
+- Git: is a versioning system that lets you store your code and code history on your local computer preventing losses and allowing sharing of that code
+- Github: is a server that lets you store the history in a database
 - Open Source: A project is said to be open-sourced if you can see the code on GitHub
 - Fork: This is a copy that you make of a project on GitHub, it gets added to your repositories
 - Repository: A project on GitHub is called a repository
@@ -65,24 +65,24 @@ Now you know some basic terms, let's get into how to get started with some resou
 
 - Before Contribute Please read [CONTRIBUTING.md](https://github.com/Emilance/Javascript-Calculator-App/blob/master/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/Emilance/Javascript-Calculator-App/blob/master/CODE_OF_CONDUCT.md)
 
-- Create an issue of the project or a feature you would like to add in the project and get the task assigned for yourself.(Issue can be any bug fixes or any feature you want to add in this project).
+- Create an issue of the project or a feature you would like to add to the project and get the task assigned for yourself. (Issue can be any bug fixes or any feature you want to add to this project).
 
 - Fork the repo to your GitHub.<br/>
 
-- Clone the Repo by going to your local Git Client in a particular local folder in your local machine by using this command with your forked repository link in place of below given link: <br/>
+- Clone the Repo by going to your local Git Client in a particular local folder in your local machine by using this command with your forked repository link in place of the below-given link: <br/>
   `git clone https://github.com/your-github-username/Javascript-Calculator-App.git`
-- Create a branch using below command.
+- Create a branch using the below command.
   `git branch <your branch name>`
 - Checkout to your branch.
   `git checkout <your branch name>`
-- Add your code in your local machine folder.
+- Add your code to your local machine folder.
   `git add . `
 - Commit your changes.
   `git commit -m"<add your message here>"`
 - Push your changes.
   `git push --set-upstream origin <your branch name>`
 
-- Make a pull request! (compare your branch with the owner main branch)
+- Make a pull request! (compare your branch with the owner's main branch)
 
 ## Contributors : 
 <br>
