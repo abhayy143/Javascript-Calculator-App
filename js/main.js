@@ -1,6 +1,5 @@
 const display1El = document.querySelector(".display-1");
 const display2El = document.querySelector(".display-2");
-const tempResultEl = document.querySelector(".temp-result");
 const numbersEl = document.querySelectorAll(".number");
 const operationEl = document.querySelectorAll(".operation");
 const equalEl = document.querySelector(".equal");
@@ -64,7 +63,6 @@ function clearVar(name = "") {
   display1El.innerText = dis1Num;
   display2El.innerText = "";
   dis2Num = "";
-  tempResultEl.innerText = result;
 }
 
 function mathOperation() {
@@ -87,7 +85,6 @@ equalEl.addEventListener("click", () => {
   result = evaluate(result.replaceAll("x", "*"))
   if (isContinue) resultTemp = result;
   display2El.innerText = result;
-  tempResultEl.innerText = "";
   dis2Num = result;
   if (!dis1ResTemp) dis1ResTemp = dis1Num;
   dis1Num = "";
@@ -99,7 +96,6 @@ clearAllEl.addEventListener("click", () => {
   display1El.innerText = "0";
   display2El.innerText = "0";
   result = "";
-  tempResultEl.innerText = "";
 });
 
 clearLastEl.addEventListener("click", () => {
