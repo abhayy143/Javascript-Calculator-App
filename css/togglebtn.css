@@ -1,12 +1,12 @@
 html {
   --bg: #ebebeb;
-  --display-bg: linear-gradient(145deg, #fdffff, #d4d8db);
+  --display-bg: linear-gradient(145deg, #b8e0ee, #47b8d4);
   --display-shadow: 7px 7px 20px #4b6d75,
     -7px -7px 20px #8dcfdf;
   ;
   --toggle-btn: #231f20;
   --body-color: rgb(95, 123, 140);
-  --btns-color: linear-gradient(145deg, #618e99, #74a9b6);
+  --btns-color: linear-gradient(145deg, #7ca5af, #5299be);
   --btns-hover-color: rgb(90, 135, 145);
   --container-bg: rgb(108, 158, 170);
   --btn-shadow: 7px 7px 20px #4b6d75,
