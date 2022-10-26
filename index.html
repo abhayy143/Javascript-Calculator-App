@@ -4,7 +4,9 @@
     <title>CALCULATOR WITH VANILLA JS</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/soapBubbles.css">
     <link rel="stylesheet" href="./css/togglebtn.css" />
+    <link rel="stylesheet" href="./css/dropdown.css">
     <!-- favicon  -->
     <link rel="icon" type="image/x-icon" href="/images/calculator.png" />
     <!-- Icons  -->
@@ -14,7 +16,16 @@
     />
   </head>
   <body onload="initHaptics()">
-    <header>
+    <header style="display: flex; justify-content: space-between; align-items: center;">
+      
+        <div class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn"><i class="bi bi-palette-fill"></i><p>Theme</p></a>
+          <div class="dropdown-content">
+            <div onclick="selectTheme('Bubbles')">Bubbles</div>
+            <div onclick="selectTheme('Number Bubbles')">Number Bubbles</div>
+          </div>
+        </div>
+      
       <div class="toggle-container" class="prevent-select">
         <input id="switch" type="checkbox" name="theme" />
         <label class="toggleLabel" for="switch">
@@ -25,45 +36,108 @@
     </header>
     <main>
 
-       <div class="bubbles">
-        <span class="one"></span>
-        <span class="two"></span>
-        <span class="three"></span>
-        <span class="four"></span>
-        <span class="five"></span>
-        <span class="six"></span>
-        <span class="seven"></span>
-        <span class="seven"></span>
+      <div class="background">
+        <div class="bubbles">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+          <span class="four"></span>
+          <span class="five"></span>
+          <span class="six"></span>
+          <span class="seven"></span>
+          <span class="seven"></span>
+        </div>
+        <div class="bubbles">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+          <span class="four"></span>
+          <span class="five"></span>
+          <span class="six"></span>
+          <span class="seven"></span>
+          <span class="seven"></span>
+        </div>
+        <div class="bubbles">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+          <span class="four"></span>
+          <span class="five"></span>
+          <span class="six"></span>
+          <span class="seven"></span>
+          <span class="seven"></span>
+        </div>
+        <div class="bubbles">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+          <span class="four"></span>
+          <span class="five"></span>
+          <span class="six"></span>
+          <span class="seven"></span>
+          <span class="seven"></span>
+        </div>
       </div>
-      <div class="bubbles">
-        <span class="one"></span>
-        <span class="two"></span>
-        <span class="three"></span>
-        <span class="four"></span>
-        <span class="five"></span>
-        <span class="six"></span>
-        <span class="seven"></span>
-        <span class="seven"></span>
-      </div>
-      <div class="bubbles">
-        <span class="one"></span>
-        <span class="two"></span>
-        <span class="three"></span>
-        <span class="four"></span>
-        <span class="five"></span>
-        <span class="six"></span>
-        <span class="seven"></span>
-        <span class="seven"></span>
-      </div>
-      <div class="bubbles">
-        <span class="one"></span>
-        <span class="two"></span>
-        <span class="three"></span>
-        <span class="four"></span>
-        <span class="five"></span>
-        <span class="six"></span>
-        <span class="seven"></span>
-        <span class="seven"></span>
+
+      <div class="background">
+        <div class="soap-bubbles">
+          <div class="soap-bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>+</span>
+          </div>
+          <div class="soap-bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>1</span>
+          </div>
+          <div class="soap-bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>5</span>
+          </div>
+          <div class="soap-bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>(</span>
+          </div>
+          <div class="soap-bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>/</span>
+          </div>
+          <div class="soap-bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>2</span>
+          </div>
+          <div class="soap-bubble">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span>9</span>
+          </div>
+        </div>
       </div>
 
         <section class="prevent-select">
@@ -113,4 +187,5 @@
   <script src="./js/evalutor.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/togglebtn.js"></script>
+  <script src="./js/dropdown.js"></script>
 </html>
