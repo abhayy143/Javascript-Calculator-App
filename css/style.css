@@ -190,6 +190,7 @@ width: 3.7vw;
   margin-top: 70px;
   width: 100%;
   justify-content: space-around;
+  z-index: -1;
 }
 .bubbles span{
   height: 60px;
