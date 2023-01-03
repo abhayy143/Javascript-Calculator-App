@@ -26,6 +26,9 @@
   margin: auto;
   background-color:var(--container-bg);
   border-radius: 28px;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
 }
 
 .all_button{
